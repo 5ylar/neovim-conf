@@ -93,7 +93,19 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "f-person/git-blame.nvim"
+  use "tpope/vim-fugitive"
 
+  -- multi cursors
+  use "mg979/vim-visual-multi"
+
+  use "sbdchd/neoformat"
+
+  use "weilbith/nvim-code-action-menu"
+
+  use "phaazon/hop.nvim"
+
+  use "karb94/neoscroll.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
