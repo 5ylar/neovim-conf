@@ -1,8 +1,10 @@
 vim.cmd [[
-try
-  colorscheme darkplus
+try  
+   colorscheme catppuccin
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
 endtry
 ]]
+
+require'nvim-web-devicons'.setup {}

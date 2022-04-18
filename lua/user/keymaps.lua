@@ -42,6 +42,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -59,6 +60,23 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Hop
+keymap("n", "mh", ":HopWord<CR>", opts)
+
+-- Code format
+keymap("n", "mf", ":Neoformat<CR>", opts)
+keymap("n", "ma", ":CodeActionMenu<CR>", opts)
+
+-- Window
+keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("n", "<C-q>", ":q<CR>", opts)
+
+-- Multi Cursor
+vim.g.VM_maps = {
+  ["Add Cursor Down"] = '<c-j>',
+  ["Add Cursor Up"] = '<c-k>',
+}
 
 -- Terminal --
 -- Better terminal navigation
